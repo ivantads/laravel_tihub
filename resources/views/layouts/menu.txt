@@ -1,0 +1,89 @@
+                    <ul id="menu" ><!--class="bg-blue dker"-->
+                        <li {!! (Request::is('index')? 'class="active"':'') !!}>
+                            <a href="{{ URL::to('index') }} ">
+                                <i class="fa fa-home"></i>
+                                <span class="link-title menu_hide">&nbsp;Dashboard</span>
+                            </a>
+                        </li>
+                        <li {!! (Request::is('index')? 'class="active"':"") !!}>
+                            <a href="{{ URL::to('index') }} ">
+                                <i class="fa fa-building"></i>
+                                <span class="link-title menu_hide">&nbsp;Empresas</span>
+                            </a>
+                        </li>					
+                        <li {!! (Request::is('index')? 'class="active"':"") !!}>
+                            <a href="{{ URL::to('index') }} ">
+                                <i class="fa fa-tasks"></i>
+                                <span class="link-title menu_hide">&nbsp;Projetos</span>
+                            </a>
+                        </li>
+                        <li {!! (Request::is('index')? 'class="active"':"") !!}>
+                            <a href="{{ URL::to('index') }} ">
+                                <i class="fa fa-calendar"></i>
+                                <span class="link-title menu_hide">&nbsp;Calend&aacute;rio</span>
+                            </a>
+                        </li>
+                        <li {!! (Request::is('versoesinovafarma')|| Request::is('aplicativos') ? 'class="dropdown_menu"' : 'class="dropdown_menu"') !!}>
+                            <a href="javascript:;">
+                                <i class="fa fa-download"></i>
+                                <span class="link-title menu_hide">&nbsp; Downloads</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul>
+                                <li {!! (Request::is('versoesinovafarma') ? 'class="active"' : '') !!}>
+                                    <a href="{{ URL::to('versoesinovafarma') }}">
+                                        <i class="fa fa-heartbeat"></i>
+                                        &nbsp; Vers&otilde;es Inovafarma
+                                    </a>
+                                </li>
+                                <li {!! (Request::is('aplicativos') ? 'class="active"' : '') !!}>
+                                    <a href="{{ URL::to('aplicativos') }}">
+                                        <i class="fa fa-database"></i>
+                                        &nbsp; Aplicativos
+                                    </a>
+                                </li>								
+							</ul>
+						</li>
+                        <li {!! (Request::is('contratos') ? 'class="active"' : '') !!}>
+                            <a href="javascript:;">
+                                <i class="fa fa-cogs"></i>
+                                <span class="link-title">&nbsp; Configura&ccedil;&otilde;es</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul>
+                                <li {!! (Request::is('contratos') ? 'class="active"' : '') !!}>
+                                    <a href="{{ URL::to('contratos') }}">
+                                        <i class="fa fa-edit"></i>
+                                        &nbsp; Contratos
+                                    </a>
+                                </li>
+							</ul>
+						</li>
+                        <li {!! (Request::is('chamados')|| Request::is('erroversoes') ? 'class="active"' : '') !!}>
+                            <a href="javascript:;">
+                                <i class="fa fa-anchor"></i>
+                                <span class="link-title">&nbsp; Inovafarma</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul>
+                                <li {!! (Request::is('chamados') ? 'class="active"' : '') !!}>
+                                    <a href="{{ URL::to('chamados') }}">
+                                        <i class="fa fa-angle-right"></i>
+                                        &nbsp; Chamados
+                                    </a>
+                                </li>
+                                <li {!! (Request::is('inovafarma/erroversoes') ? 'class="active"' : '') !!}>
+                                    <a href="{{ URL::to('inovafarma/erroversoes') }}">
+                                        <i class="fa fa-angle-right"></i>
+                                        &nbsp; Erros de Vers&otilde;es
+                                    </a>
+                                </li>								
+							</ul>
+						</li>
+                        <li {!! (Request::is('index')? 'class="active"':"") !!}>
+                            <a href="{{ URL::to('index') }} ">
+                                <i class="fa fa-link"></i>
+                                <span class="link-title">&nbsp;Links Diversos</span>
+                            </a>
+                        </li>						
+					</ul>
